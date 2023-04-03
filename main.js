@@ -1,8 +1,8 @@
 "use strict";
 
 // Doesn't support es6 import or modules system so we are using es5 modules here
-const express = require("express");
-const bodyParser = require("body-parser");
+import express from "express";
+import bodyParser from "body-parser";
 
 // Custom imports
 import routes from "./src/routes";

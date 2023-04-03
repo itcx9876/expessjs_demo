@@ -7,7 +7,7 @@
     "build":"babel main.js -d build",
     "transpile":"babel . --out-dir build --ignore node_modules",
 
-    "dev": "npm run build && nodemon build/main.js"
+    "dev": "nodemon main.js --exec babel-node main.js"
   },
   "keywords": [],
   "author": "",
