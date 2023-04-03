@@ -1,4 +1,4 @@
-exports.customers = [
+export const customers = [
     {
         "name": "john1",
         "email": "john@gmail.com",

@@ -1,9 +1,9 @@
-const { Router } = require("express");
+import { Router } from "express";
 const { getAllUsers, createNewUser, deleteUser, updateUser } = require("../controller/customerController");
 
 const router = Router();
 
-module.exports = () => {
+export default () => {
 
 
     router.get("/", getAllUsers)
@@ -13,6 +13,6 @@ module.exports = () => {
     router.delete('/:id', deleteUser)
 
     router.put('/:id', updateUser)
-    
+
     return router;
 }

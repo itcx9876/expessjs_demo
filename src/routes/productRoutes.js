@@ -1,14 +1,13 @@
-const {Router}=require("express");
+import { Router } from "express";
+const routes = Router();
 
-const routes=Router();
 
+export default () => {
 
-module.exports=()=>{
-
-    routes.get("/",(req,res)=>{
+    routes.get("/", (req, res) => {
         res.json("get all products")
     })
-    routes.get("/activeProducts",(req,res)=>{
+    routes.get("/activeProducts", (req, res) => {
         res.json("get active products")
     })
     return routes;

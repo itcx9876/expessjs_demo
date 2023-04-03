@@ -1,11 +1,13 @@
-const {Router}=require("express")
-const customerRoutes = require("./customerRoutes")
-const productRoutes = require("./productRoutes")
-const router=Router()
 
+import { Router } from "express";
+// const {Router}=require("express")
 
-module.exports=()=>{
-    router.use("/customers",customerRoutes())
-    router.use("/product",productRoutes())
+import customerRoutes from "./customerRoutes";
+import productRoutes from "./productRoutes";
+const router = Router()
+
+export default () => {
+    router.use("/customers", customerRoutes())
+    router.use("/product", productRoutes())
     return router;
 }

@@ -1,11 +1,11 @@
 const { customers } = require("../data");
 
 
-exports.getAllUsers = (req, res) => {
+export const getAllUsers = (req, res) => {
     res.json(customers)
 }
 
-exports.createNewUser = (req, res) => {
+export const createNewUser = (req, res) => {
     const data = req.body;
     let errors = []
     if (data.name === "") {
@@ -29,7 +29,7 @@ exports.createNewUser = (req, res) => {
     return res.sendStatus(201);
 }
 
-exports.updateUser = (req, res) => {
+export const updateUser = (req, res) => {
     const id = req.params.id;
     const data = req.body;
     let isFound = customers.filter(customer => customer.emloyeeCode === Number(id)).length === 0;
@@ -47,7 +47,7 @@ exports.updateUser = (req, res) => {
 
     return res.status(200).json(customers)
 }
-exports.deleteUser = (req, res) => {
+export const deleteUser = (req, res) => {
     console.log("DELETE CUSTOMER")
     const id = req.params.id;
     let isFound = customers.filter(customer => customer.emloyeeCode === Number(id)).length === 0;

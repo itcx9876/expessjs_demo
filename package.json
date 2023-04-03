@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/main.js"
+    "build":"babel main.js -d build",
+    "transpile":"babel . --out-dir build --ignore node_modules",
+
+    "dev": "npm run build && nodemon build/main.js"
   },
   "keywords": [],
   "author": "",
